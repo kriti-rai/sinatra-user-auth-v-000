@@ -32,7 +32,7 @@ class ApplicationController < Sinatra::Base
     if @user = User.find_by(email: params["email"], password: params["password"])
       session[:id] = @user.id
     else
-      puts "Incorrect email address or password. Please try again."
+      'Incorrect email address or password. Please try again'
       redirect '/sessions/login'
     end
 
