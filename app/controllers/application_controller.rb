@@ -33,6 +33,7 @@ class ApplicationController < Sinatra::Base
       session[:id] = @user.id
     else
       redirect '/sessions/login'
+    end
 
     redirect '/users/home'
   end
