@@ -33,7 +33,7 @@ class ApplicationController < Sinatra::Base
       session[:id] = @user.id
     else
       'Incorrect email address or password. Please try again'
-      redirect '/sessions/login'
+      # redirect '/sessions/login'
     end
 
     redirect '/users/home'
